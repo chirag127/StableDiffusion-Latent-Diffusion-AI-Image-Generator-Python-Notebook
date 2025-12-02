@@ -1,115 +1,59 @@
-# =========================================================================
-# APEX TECHNICAL AUTHORITY .GITIGNORE
-# PROJECT: StableFlow-AI-Image-Generation-Jupyter-Notebook
-# STACK: Python, Jupyter Notebook, AI/ML
-# =========================================================================
-
-# -------------------------------------------------------------------------
-# Python Byte-compiled / Cache files
-# -------------------------------------------------------------------------
+# Byte-compiled / optimized python files
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+*.pyo
+*.pyd
 
-# -------------------------------------------------------------------------
-# Distribution / Packaging
-# -------------------------------------------------------------------------
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
 build/
 dist/
 *.egg-info/
-.eggs/
-eggs/
+*.egg
+wheels/
+*.whl
 
-# -------------------------------------------------------------------------
-# Virtual Environments
-# -------------------------------------------------------------------------
-.env
-env/
-venv/
-.venv/
-ENV/
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-# -------------------------------------------------------------------------
-# Jupyter Notebook
-# -------------------------------------------------------------------------
-.ipynb_checkpoints
-
-# -------------------------------------------------------------------------
-# AI / Machine Learning Artifacts
-# -------------------------------------------------------------------------
-# Large datasets (should be managed with DVC or stored externally)
-/data/
-/datasets/
-*.csv
-*.jsonl
-
-# Model weights and checkpoints (these are binary and large)
-/models/
-/checkpoints/
-*.pt
-*.pth
-*.bin
-*.ckpt
-*.safetensors
-*.onnx
-*.h5
-
-# Generated outputs
-/outputs/
-/generated/
-/images/
-*.png
-*.jpg
-*.jpeg
-*.gif
-
-# Logs and experiment tracking
-/logs/
-/runs/
-mlruns/
-wdb/
-wandb/
-
-# -------------------------------------------------------------------------
-# IDE and Editor Configuration
-# -------------------------------------------------------------------------
-.idea/
-.vscode/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.swp
-
-# -------------------------------------------------------------------------
-# Testing & Coverage
-# -------------------------------------------------------------------------
-.pytest_cache/
-.coverage
-.coverage.*
+# Unit test / coverage reports
 htmlcov/
 .tox/
+.nox/
+.coverage
+.coverage.*
+.cache/
+cover/
+*.cover
+*.py,cover
+.hypothesis/
 
-# -------------------------------------------------------------------------
-# OS-specific files
-# -------------------------------------------------------------------------
+# PyInstaller
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~.py
+
+# Virtual environment
+virtualenv/
+venv/
+ENV/
+env/
+
+# OS generated files
 .DS_Store
 Thumbs.db
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 
-# -------------------------------------------------------------------------
-# Secrets & Credentials (NEVER commit these)
-# -------------------------------------------------------------------------
-*.env
-credentials.json
-secrets.yml
-*.pem
-*.key
-
-# Ignore all .env files, but not the template
-.env.*
-!*.env.example
-!*.env.template
+# Hugging Face Transformers cache (if applicable for large models/datasets)
+.cache/huggingface/
