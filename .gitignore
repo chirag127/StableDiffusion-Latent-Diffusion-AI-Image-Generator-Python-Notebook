@@ -1,0 +1,115 @@
+# =========================================================================
+# APEX TECHNICAL AUTHORITY .GITIGNORE
+# PROJECT: StableFlow-AI-Image-Generation-Jupyter-Notebook
+# STACK: Python, Jupyter Notebook, AI/ML
+# =========================================================================
+
+# -------------------------------------------------------------------------
+# Python Byte-compiled / Cache files
+# -------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# -------------------------------------------------------------------------
+# Distribution / Packaging
+# -------------------------------------------------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+eggs/
+
+# -------------------------------------------------------------------------
+# Virtual Environments
+# -------------------------------------------------------------------------
+.env
+env/
+venv/
+.venv/
+ENV/
+
+# -------------------------------------------------------------------------
+# Jupyter Notebook
+# -------------------------------------------------------------------------
+.ipynb_checkpoints
+
+# -------------------------------------------------------------------------
+# AI / Machine Learning Artifacts
+# -------------------------------------------------------------------------
+# Large datasets (should be managed with DVC or stored externally)
+/data/
+/datasets/
+*.csv
+*.jsonl
+
+# Model weights and checkpoints (these are binary and large)
+/models/
+/checkpoints/
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+
+# Generated outputs
+/outputs/
+/generated/
+/images/
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Logs and experiment tracking
+/logs/
+/runs/
+mlruns/
+wdb/
+wandb/
+
+# -------------------------------------------------------------------------
+# IDE and Editor Configuration
+# -------------------------------------------------------------------------
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# -------------------------------------------------------------------------
+# Testing & Coverage
+# -------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# -------------------------------------------------------------------------
+# OS-specific files
+# -------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# -------------------------------------------------------------------------
+# Secrets & Credentials (NEVER commit these)
+# -------------------------------------------------------------------------
+*.env
+credentials.json
+secrets.yml
+*.pem
+*.key
+
+# Ignore all .env files, but not the template
+.env.*
+!*.env.example
+!*.env.template
