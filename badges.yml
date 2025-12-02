@@ -1,52 +1,31 @@
-# badges.yml
-# Configuration file for generating dynamic badges based on Apex Standards (chirag127/StableDiffusion-Latent-Diffusion-Image-Generation-AI)
-
-badges:
-  - name: Build Status
-    type: github-actions
-    repo: StableDiffusion-Latent-Diffusion-Image-Generation-AI
-    user: chirag127
-    workflow: CI/CD
-    label: Build
-    color: blue
-    style: flat-square
-
-  - name: Code Coverage
-    type: codecov
-    repo: chirag127/StableDiffusion-Latent-Diffusion-Image-Generation-AI
-    token: ${{ secrets.CODECOV_TOKEN }}
-    label: coverage
-    style: flat-square
-
-  - name: Python Version
-    type: badge
-    label: Python
-    message: 3.10+
-    color: blue
-    style: flat-square
-
-  - name: Framework
-    type: badge
-    label: Model
-    message: Latent Diffusion
-    color: success
-    style: flat-square
-
-  - name: License
-    type: license
-    repo: chirag127/StableDiffusion-Latent-Diffusion-Image-Generation-AI
-    color: success
-    style: flat-square
-
-  - name: GitHub Stars
-    type: star
-    repo: chirag127/StableDiffusion-Latent-Diffusion-Image-Generation-AI
-    color: yellow
-    style: flat-square
-
-  - name: Language
-    type: badge
-    label: Language
-    message: Jupyter Notebook
-    color: lightgray
-    style: flat-square
+build_status:
+  provider: github-actions
+  workflow_name: CI
+  branch: main
+code_coverage:
+  provider: codecov
+  # Note: Codecov badge requires repository integration setup
+tech_stack:
+  provider: custom
+  version: Python, Pytest, Ruff, uv
+  # This is a descriptive badge, not a dynamic link to a specific tool version.
+lint_format:
+  provider: custom
+  version: Ruff
+license:
+  provider: common-license
+  type: cc-by-nc-4.0
+github_stars:
+  owner: chirag127
+  repo: StableDiffusion-Latent-Diffusion-Image-Generation-AI
+  count: true
+  # Format: https://img.shields.io/github/stars/chirag127/StableDiffusion-Latent-Diffusion-Image-Generation-AI.svg?style=flat-square
+# Example for a potential future badge (e.g., Hugging Face downloads if model is hosted there)
+# huggingface_downloads:
+#   provider: custom
+#   name: Hugging Face
+#   icon: https://raw.githubusercontent.com/community/community/master/icons/brands/huggingface.svg
+#   link: https://huggingface.co/chirag127/StableDiffusion-Latent-Diffusion-Image-Generation-AI
+#   title: Downloads
+#   value: 10k
+#   style: flat-square
